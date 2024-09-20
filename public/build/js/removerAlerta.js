@@ -1,0 +1,1 @@
+function quitarAlertas(){const e=document.querySelectorAll(".alerta");setTimeout((()=>{e.forEach((e=>{e.remove()}))}),2e3)}document.addEventListener("DOMContentLoaded",(function(){quitarAlertas()}));

@@ -1,0 +1,28 @@
+{
+  "name": "odonsecure",
+  "version": "1.0.0",
+  "description": "odonsecure odontologia PHP MVC API proyecto",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gulp":"gulp",
+    "build" : "gulp build"
+  },
+  "keywords": [
+    "PHP",
+    "odontologo",
+    "pagina",
+    "web",
+    "MVC",
+    "API"
+  ],
+  "author": "JesusQ",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.78.0",
+    "terser": "^5.31.6"
+  }
+}

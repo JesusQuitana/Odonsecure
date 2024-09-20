@@ -1,0 +1,38 @@
+.admin {
+    .log_nombre {
+        margin-top: 1rem;
+    }
+
+    .citasBody {
+        @include grid(3, 1rem);
+        .cita {
+            border: 1px solid $verdeClaro;
+            @include flex(column);
+            gap: .5rem;
+            justify-content: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: darken($aquaP,5%);
+            cursor: pointer;
+            transition: all .2s ease;
+            &:hover {
+                transform: scale(1.1);
+                background-color: lighten($aquaP, 5%);
+            }
+            .verde {
+                color: #1cb435;
+            }
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+//DISEÑO RESPONSIVE EN TELEFONOS Y TABLETS
+@include telf() {
+    .admin {
+        .citasBody {
+            @include grid(2, 1rem);
+        }
+    }
+}

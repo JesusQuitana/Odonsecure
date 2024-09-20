@@ -1,0 +1,7 @@
+.header {
+    @include flex();
+    justify-content: space-between;
+    h1 {
+        margin: 0;
+    }
+}

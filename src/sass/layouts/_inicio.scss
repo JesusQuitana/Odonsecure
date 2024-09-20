@@ -1,0 +1,126 @@
+.inicio {
+    .log_nombre {
+        margin-top: 1rem;
+    }
+    h2 {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .paginador {
+        margin-top: 1rem;
+        @include grid(3);
+        a {
+            @include flex();
+            align-items: center;
+        }
+    }
+
+    .servicios {
+        @include grid(3, 1rem);
+        .servicio {
+            border: 1px solid $verdeClaro;
+            @include flex(column);
+            gap: .5rem;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: darken($aquaP,5%);
+            cursor: pointer;
+            transition: all .2s ease;
+            &:hover {
+                transform: scale(1.1);
+                background-color: lighten($aquaP, 5%);
+            }
+            &.seleccionado {
+                background-color: lighten($aquaP, 5%);
+            }
+            p {
+                font-weight: bold;
+            }
+            span {
+                color: lighten(#1cb435,10%);
+            }
+        }
+    }
+
+    form {
+        .paginaTab {
+        display: none;
+        margin-bottom: 4rem;
+        &.mostrar {
+            display: block;
+        }
+        }
+    }
+
+    .resumen {
+        margin-bottom: 1rem;
+        margin-left: 2.5rem;
+        @include flex(column, 2rem);
+        span {
+            font-weight: bold;
+        }
+        .precio {
+            color: #1cb435;
+        }
+    }
+
+    .botonAgendar {
+        margin-bottom: 3rem;
+        @include flex();
+        a {
+            text-align: center;
+            place-items: center;
+        }
+    }
+
+    .botones_paginador {
+        @include flex();
+        justify-content: space-between;
+    }
+}
+
+.tab {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    font-weight: bold;
+    color: $blanco;
+    text-align: center;
+    &.verde {
+        background-color: #1cb435;
+    }
+    &.rojo {
+        background-color: $rojo;
+    }
+    &.verdeClaro {
+        background-color: $verdeClaro;
+    }
+}
+.seleccionado {
+    &.verde {
+        background-color: lighten(#1cb435, 10%);
+    }
+    &.rojo {
+        background-color: lighten($rojo, 10%);
+    }
+    &.verdeClaro {
+        background-color: lighten($verdeClaro, 10%);
+    }
+}
+//DISEÑO RESPONSIVE EN TELEFONOS Y TABLETS
+@include telf() {
+    .inicio {
+        .servicios {
+            @include grid(2, 1rem);
+        }
+        .paginador {
+            overflow: hidden;
+        }
+    }
+}
