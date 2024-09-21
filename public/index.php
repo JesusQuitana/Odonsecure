@@ -1,5 +1,5 @@
 <?php
-include '../includes/app.php';
+include dirname(__DIR__) . '/includes/app.php';
 use MVC\Router;
 use Controllers\LogController;
 use Controllers\UserController;
