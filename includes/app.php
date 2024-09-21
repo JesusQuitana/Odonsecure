@@ -1,6 +1,6 @@
 <?php
 //###############CONSTANTES Y VARIABLES
-define("AUTOLOAD", dirname(__DIR__) . "\\vendor\\autoload.php");
+define("AUTOLOAD", dirname(__DIR__) . "/vendor/autoload.php");
 
 //###############INCLUDES##############
 include AUTOLOAD;
