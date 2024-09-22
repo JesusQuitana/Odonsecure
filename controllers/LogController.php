@@ -63,8 +63,11 @@ abstract class LogController {
                 $registro = $usuario::registrar();
 
                 if( $registro["resultado"] ) {
-                    Email::enviarConfirmacion($usuario->token, $usuario->email);
-                    header("Location: /confirm");
+                    if(Email::enviarConfirmacion($usuario->token, $usuario->email)) {
+                        header("Location: /confirm");
+                    } else {
+                        $usuario::setAlertas("error", "Error al Enviar Correo");
+                    }
                 } else {
                     $usuario::setAlertas("error", "Error al Registrar Usuario");
                 }
